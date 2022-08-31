@@ -1,10 +1,8 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
-// import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
-// import Button from "@material-ui/core/Button";
+import React from "react";
 import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
   root: {
@@ -23,26 +21,21 @@ const useStyles = makeStyles({
   },
 });
 
-export default function SimpleCard({ banco }) {
+export default function SimpleCard({ data }) {
   const classes = useStyles();
-  //   const bull = <span className={classes.bullet}>•</span>;
-  //   new_amount: 0.97, new_currency: 'EUR', old_currency: 'USD', old_amount: 1}
+
   return (
     <Card className={classes.root}>
       <CardContent>
-        <Typography
-          className={classes.title}
-          color="textSecondary"
-          gutterBottom
-        >
-          Le Resultat est:
+        
+        <Typography className={classes.title} color="textPrimary" gutterBottom>
+          Resultat
         </Typography>
+
         <Typography variant="h5" component="h2">
-          {banco.old_amount} {banco.old_currency} est:
+          {data.old_amount} {data.old_currency} {"=>"} {data.new_amount} {data.new_currency}
         </Typography>
-        <Typography variant="h5" component="h2">
-          {banco.new_amount} {banco.new_currency}
-        </Typography>
+
       </CardContent>
     </Card>
   );

@@ -1,5 +1,13 @@
 {
-    "terminal.integrated.automationProfile.linux": {
+    
+    "cSpell.enableFiletypes": [
+         
+    ],
+    "terminal.integrated.copyOnSelection": false,
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "cSpell.language": "en,fr",
+    "cSpell.enabled": false,
+    "cSpell.customDictionaries": {
     
     }
 }
