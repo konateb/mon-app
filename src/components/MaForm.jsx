@@ -8,27 +8,31 @@ const MaForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("A name was submitted: " + text);
+    alert("Le nom submis est: " + text);
     setText("");
   };
   return (
-    <div className="flex-container">
-      <form onSubmit={handleSubmit}>
-        <label>
-          Name:
-          <input type="text" value={text} onChange={handleInput} />
-        </label>
-        <input
-          type="submit"
-          value="Submit"
-          disabled={text.length <= 6 ? true : false}
-        />
-      </form>
-      <div>
-        <p>{text}</p>
-        <p className="jaune">{text.length}</p>
+    <>
+      <div className="flex-container">
+        <form onSubmit={handleSubmit}>
+          <label>
+            Tappez 6 caractères:
+            <input type="text" value={text} onChange={handleInput} />
+          </label>
+          <input
+            type="submit"
+            value="Submit"
+            disabled={text.length < 6 ? true : false}
+          />
+          <div>
+            <p>{text}</p>
+            {text.length === 0
+              ? false
+              : true && <p className="rouge">{text.length} caractères</p>}
+          </div>
+        </form>
       </div>
-    </div>
+    </>
   );
 };
 

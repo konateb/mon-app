@@ -43,10 +43,7 @@ p {
 .bleu {
   color: blue
 }
-.jaune{
-  color:rgb(0, 255, 60) ; 
-  text-justify: right;
-}
+
 .flex-container {
   display: flex;
   justify-content: 'space-evenly';
