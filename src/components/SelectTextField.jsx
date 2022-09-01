@@ -30,29 +30,29 @@ const useStyles = makeStyles({
 });
 const currencies = [
   {
-    value: "USD(United States Dollar)",
-    label: "$",
+    value: "USD",
+    label: "$(United States Dollar)",
   },
   {
-    value: "CAD(Canadian Dollar)",
-    label: "$",
+    value: "CAD",
+    label: "$(Canadian Dollar)",
   },
   {
-    value: "EUR(Euro)",
-    label: "€",
+    value: "EUR",
+    label: "€(Euro)",
   },
   {
-    value: "BTC(Bitcoin)",
-    label: "฿",
+    value: "BTC",
+    label: "฿(Bitcoin)",
   },
   {
-    value: "JPY(Japanese Yen)",
-    label: "¥",
+    value: "JPY",
+    label: "¥(Japanese Yen)",
   },
   {
     value: "GBP",
     label: "£(British Pound)",
-  },	
+  },
   {
     value: "XOF",
     label: "CFA(West African Franc)",

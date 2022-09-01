@@ -27,15 +27,14 @@ export default function SimpleCard({ data }) {
   return (
     <Card className={classes.root}>
       <CardContent>
-        
         <Typography className={classes.title} color="textPrimary" gutterBottom>
           Resultat
         </Typography>
 
         <Typography variant="h5" component="h2">
-          {data.old_amount} {data.old_currency} {"=>"} {data.new_amount} {data.new_currency}
+          {data.old_amount} {data.old_currency} {"=>"} {data.new_amount}{" "}
+          {data.new_currency}
         </Typography>
-
       </CardContent>
     </Card>
   );

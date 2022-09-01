@@ -11,8 +11,6 @@ import React from "react";
 import SelectTextFields from "./components/SelectTextField";
 
 const App = () => {
-    
-
   return (
     <div className="App">
       <Box
