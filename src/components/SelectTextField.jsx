@@ -68,6 +68,7 @@ export default function SelectTextFields() {
   const [data, setData] = React.useState({});
   const [formData, setFormData] = React.useState(defaultValues);
   const [isError, setIsError] = React.useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [showResult, setShowResult] = useState(false);
   const getData = useCallback(() => {
     const options = {
@@ -87,8 +88,8 @@ export default function SelectTextFields() {
     axios
       .request(options)
       .then(function (response) {
-        console.log(response.data);
         setData(response.data);
+        setIsSubmitting(false);
         setShowResult(true);
       })
       .catch(function (error) {
@@ -111,6 +112,7 @@ export default function SelectTextFields() {
       setIsError(true);
       return;
     }
+    setIsSubmitting(true);
     getData();
   };
   return (
@@ -195,7 +197,12 @@ export default function SelectTextFields() {
             ))}
           </TextField>
 
-          <Button variant="contained" color="primary" type="submit">
+          <Button
+            variant="contained"
+            color="primary"
+            disabled={isSubmitting}
+            type="submit"
+          >
             Convertir
           </Button>
         </Box>
